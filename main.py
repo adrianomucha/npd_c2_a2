@@ -77,8 +77,8 @@ class Circle(object):
 
     def perimeter(self):
         return self.radius * 1
-   # def update_radius(self, new_radius):
-    #    self.radius.append(shape_object)
+    def update_radius(self, new_radius):
+        self.radius.append(shape_object)
     def add_ally(self, shape_object):
         self.allies.append(shape_object)
     def add_enemy(self, shape_object):
@@ -99,7 +99,7 @@ if __name__ == '__main__':
     print("Area: ",triangle_tom.area())
 
 if __name__ == '__main__':
-    circle_andrew = Circle(2,3, "Andrew",[triangle_tom], [square_marty])
+    circle_andrew = Circle(2,3.14159265359, "Andrew",[triangle_tom], [square_marty])
     print("Area:", circle_andrew.area())
-    #print("Update Edge: ", circle_andrew.update_radius(5))
+    print("Update Edge: ", circle_andrew.update_radius(5))
     print("Area: ", circle_andrew.area())
