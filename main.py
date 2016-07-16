@@ -67,7 +67,6 @@ class Circle(object):
 
     def __init__(self, radius, pi, name, allies, enemies):
         self.radius = radius
-        self.pi = pi
         self.name = name
         self.allies = allies
         self.enemies = enemies
@@ -87,19 +86,19 @@ class Circle(object):
 
 
 if __name__=='__main__':
-    square_marty = Square(5, "marty", [], [triangle_tom, circle_andrew])
+    square_marty = Square(5, "marty", [], [])
     print("Area: ",square_marty.area())
     print("Update Edge: ",square_marty.update_edge_length(10))
     print("Area: ",square_marty.area())
 
 if __name__ == '__main__':
-    triangle_tom = Triangle(2, 2 , "tom", [], [square_marty])
+    triangle_tom = Triangle(2, 2 , "tom", [], [])
     print("Area:",triangle_tom.area())
     print("Update Edge: ",triangle_tom.update_edge_length(10))
     print("Area: ",triangle_tom.area())
 
 if __name__ == '__main__':
-    circle_andrew = Circle(2,3.14159265359, "Andrew",[triangle_tom], [square_marty])
+    circle_andrew = Circle(2,3.14159265359, "Andrew",[], [])
     print("Area:", circle_andrew.area())
     print("Update Edge: ", circle_andrew.update_radius(5))
     print("Area: ", circle_andrew.area())
