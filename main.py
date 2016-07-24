@@ -37,7 +37,7 @@ class Square(object):
         self.enemies.append(shape_object)
 
 class Triangle(object):
-
+    shape_object ='triangle'
     def __init__(self, edge_length, edge_height, name, allies, enemies):
         self.edge_length = edge_length
         self.edge_height = edge_height
@@ -64,12 +64,13 @@ class Triangle(object):
         self.edge_height = new_height
 
 class Circle(object):
-
-    def __init__(self, radius, pi, name, allies, enemies):
-        self.radius = radius
+    shape_object ='circle'
+    def __init__(self, new_radius, pi, name, allies, enemies):
+        self.radius = new_radius
         self.name = name
         self.allies = allies
         self.enemies = enemies
+        self.pi = pi
 
     def area(self):
         return self.pi * self.radius * self.radius
@@ -91,13 +92,11 @@ if __name__=='__main__':
     print("Update Edge: ",square_marty.update_edge_length(10))
     print("Area: ",square_marty.area())
 
-if __name__ == '__main__':
     triangle_tom = Triangle(2, 2 , "tom", [], [])
     print("Area:",triangle_tom.area())
     print("Update Edge: ",triangle_tom.update_edge_length(10))
     print("Area: ",triangle_tom.area())
 
-if __name__ == '__main__':
     circle_andrew = Circle(2,3.14159265359, "Andrew",[], [])
     print("Area:", circle_andrew.area())
     print("Update Edge: ", circle_andrew.update_radius(5))
